@@ -1,6 +1,6 @@
 # Resume
 
-My resume, written in Latex. Based on the template by LianTze Lim (liantze@gmail.com)
+My resume, written in Latex. Based on the template by LianTze Lim (liantze@gmail.com)  
 View the Resume on [Overleaf](https://www.overleaf.com/read/jnmmtgjvxmrr)
 
 ## Requirements and Compilation (from Lim)

@@ -1,0 +1,124 @@
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons 
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper]{altacv}
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages. 
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% 
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font 
+%% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm,footskip=2\baselineskip}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{Navy}{HTML}{000080}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\usepackage[colorlinks]{hyperref}
+
+\begin{document}
+
+\name{Sagnik Nayak}
+\tagline{Computer Science}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{isagnik10@gmail.com }
+  \phone{+1 9199958852}
+  \homepage{github.com/isagnik}
+%  \twitter{@twitterhandle}
+  \linkedin{linkedin.com/in/sagnik10/}
+  \newline
+  \newline
+  \address{Address: 1505 Hillsborough St, Raleigh NC 27605, USA}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+%   \orcid{orcid.org/0000-0000-0000-0000}
+}
+
+%% Make the header extend all the way to the right, if you want. 
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Experience}
+
+\cvevent{Vice President of Business\\Principle Engineer - Lead of Mission Control}
+        {Liquid Rocketry Lab}
+        {Sept 2019 -- Present}{Raleigh, NC USA}
+\begin{itemize}
+\item \textbf{VP of Business}\\
+    la di da
+\item \textbf{Principle Engineer}\\
+    Developing the firmware for the control systems of a Liquid Propulsion Rocket. Programming for a TI Hercules, to control the relay systems, sensors, abort mechanisms, etc. Firmware code ties in with the in house compiler code to run tests for the rocket engine in the in house test stand. Source code in C developed in Code Composer, Termite for data CLI, and Halcogen for code
+generation.
+\end{itemize}
+\divider
+
+\cvevent{Research Assistant}
+        {North Carolina State University}
+        {Jan 2020 -- Present}{Raleigh, NC USA}
+\begin{itemize}
+\item \textbf{Measurement study of AirBnb (Summer 2020)}\\
+Used SSL network interceptions to recreate requests to Airbnb servers. Created an API script using python to collect data and extract statistical information about property booking rates, pricing trends, amenities, ownership percentages, etc. Data representation using Matplotlib & numpy.
+\newline
+\item \textbf{Measurement study of E Scooter Companies (Spring 2020)}\\
+Collected data of E scooter companies and mapped the usage traffic to understand the economic statistics of running such scooters. Data collection using white hat techniques and REST APIs to write geolocation scripts to locate and map bikes, calculate trip distances, fuel consumption, average pricing, to calculate how demand affects pricing and vice versa. 
+\end{itemize}
+\divider
+
+\cvevent{Teaching Assistant}
+        {North Carolina State University}
+        {Aug 2020 -- Present}{Raleigh, NC USA}
+\begin{itemize}
+
+\item TA for a required class for STEM majors - E115 Introduction to Computing
+Environments, undertaken by over 700 students each semester. Individually
+responsible over over 50 students, grading, office hours, exams, etc.
+\end{itemize}
+
+\end{document}
